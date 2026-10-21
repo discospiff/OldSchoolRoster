@@ -1,0 +1,32 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace OldSchoolRoster.Models
+{
+    public class RosterEntry
+    {
+        public Guid Id { get; set; }
+
+        [Display(Name = "First Name")]
+        [Required]
+
+        [StringLength(50)]
+        public string FirstName { get; set; } = string.Empty;
+
+        [Display(Name = "Last Name")]
+        [Required]
+        [StringLength(50)]
+        public string LastName { get; set; } = string.Empty;
+
+        [StringLength(100)]
+        public string? Major { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string Shortcut { get; set; } = string.Empty;
+
+        [StringLength(200)]
+        public string? WhereUsed { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+    }
+}
